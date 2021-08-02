@@ -41,6 +41,7 @@ def product():
         print('\nThis is the Drinks Menu: ', products_list)
     elif user_input == 2:
         print('\nThis is the Drinks Menu: ', products_list)
+        new_product = input('\nAdd new product to menu')
         products_list.append(new_product)
         print('\nNew Drink Added: ', products_list)
     elif user_input == 3:
@@ -60,3 +61,38 @@ def product():
             input('\nSelect a product to delete: '))
         del products_list[deleted_input]
         print('\nThis is the new products menu: ', products_list)
+def courier():
+    user_input = int(input('''
+[0] Main Menu
+[1] View Couriers
+[2] Create New Couriers
+[3] Update Couriers
+[4] Delete Couriers
+\tEnter Option: '''))
+    if user_input == 0:
+        main()
+    elif user_input == 1:
+        print('\n The Courier List: ', couriers_list)
+    elif user_input == 2:
+        print('\nThe Courier List: ', couriers_list)
+        new_courier = input('\nEnter New Courier: ')
+        couriers_list.append(new_courier)
+        print("\nSuccessfully added a new courier!", couriers_list)
+    elif user_input == 3:
+        print("\nCouriers List is: ")
+        for value, index in enumerate(couriers_list):
+            print(value, index)
+        number_input = int(input(
+        '\n Select Courier Option To Replace:  '))
+        new_courier = input('\nAdd a New Name: ')
+        couriers_list[number_input] = new_courier
+        print("\nThis is the New Courier List: ", couriers_list)
+    elif user_input == 4:
+        print('\nDelete Courier')
+        for key, value in enumerate(couriers_list):
+            print(key, value)
+        deleted_input = int(input(
+            '\nEnter Courier Option to Remove: '))
+        del couriers_list[deleted_input]
+        print('\nThis is the New Courier List: ', couriers_list)
+main()
