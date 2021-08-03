@@ -1,10 +1,11 @@
 from Functions import read_csv_file, save_list, append_dict, update_dict, delete_index, enumerate_orders, whitespace
+import csv
 from pprint import pprint
 order_list = []
 product_list = []
 courier_list = []
-order_status = ['Preparing', 'Quality checks',
-                'Driver on the way', 'Delivered']
+order_status = ['Preparing...', 'Quality Review',
+                'Driver Enroute :)', 'Delivered!']
 order_list = read_csv_file('Order_list.csv', order_list)
 product_list = read_csv_file('Product_list.csv', product_list)
 courier_list = read_csv_file('Courier_list.csv', courier_list)
@@ -61,7 +62,7 @@ def product():
     elif user_input == 3:  # Check is \n still needs to be here
         print('\n\tThe Product List: \n\t')
         enumerate_orders(product_list)
-        number_input = float(
+        number_input = int(
             input('\n\tChoose Number To Replace Product: '))
         new_variable = product_list[number_input]
         update_dict(new_variable)
@@ -113,7 +114,7 @@ def courier():
         print('\n\tThe Courier List: ', '\n')
         enumerate_orders(courier_list)
         number_input = int(
-            input('\n\tChoose A Courier To Replace: '))
+            input('\n\tChoose A Courier (number) To Replace: '))
         new_variable = courier_list[number_input]
         update_dict(new_variable)
         print("\n\tCourier's List Updated:\n\t")

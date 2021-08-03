@@ -1,0 +1,6 @@
+Customer name,Customer address,Customer phone,Courier,Status,Items
+John,"Unit 2,12 Main Street,London,WH1 2ER",07457442458,2,Preparing,"1,2,4"
+Aliana,"17 Mill Road,Enfield,EN34 6FW",07457314420,3,Delivery on the way,"6,5,1"
+Rumaanah,"93 North Street,Sheffield,S78 9WL",07916026321,6,Delivered,"4,3,0"
+Oussama,"9732 Green Lane,Coventry,CV83 6VN",07523722156,1,Delivery is on the way,"1,5,2"
+Kawsar,"68 Sycamore Lane, Birmingham, B19 4HR",718181818,1,Preparing,1
